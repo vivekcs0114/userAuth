@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="../../node_modules/angular/angular.min.js"></script>
+    <script src="../../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+<body>
+<form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+    <p>Name:<br>
+        <input type="text" name="user" ng-model="user" required>
+        <span ng-show="myForm.user.$dirty">
+<span ng-show="myForm.user.$error.required">Username is required.</span>
+</span>
+    </p>
+    <p>Email:<br>
+        <input type="email" name="email" ng-model="email" required>
+        <span ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.required">Email is required.</span>
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+</span>
+    </p>
+    <p>Mobile:<br>
+        <input type="mobile" name="mobile" ng-model="mobile" required>
+        <span ng-show="myForm.mobile.$dirty && myForm.mobile.$invalid">
+<span ng-show="myForm.mobile.$error.required">mobile is required.</span>
+<span ng-show="myForm.mobile.$error.email">Invalid mobile address.</span>
+</span>
+    </p>
+    <p>Password:<br>
+        <input type="password" name="password" ng-model="password" required>
+        <span ng-show="myForm.password.$dirty">
+<span ng-show="myForm.password.$error.required">password is required.</span>
+</span>
+    </p>
+    <p>Confirm Password:<br>
+        <input type="password" name="confpass" ng-model="confpass" required>
+        <span ng-show="myForm.confpass.$dirty">
+<span ng-show="myForm.confpass.$error.required">mobile is required.</span>
+</span>
+    </p>
+    <p>
+        <input type="submit" ng-click="register()" ng-disabled=" myForm.user.$invalid || myForm.email.$invalid ||
+         myForm.mobile.$invalid || myForm.password.$invalid || myForm.confpass.$invalid">
+    </p>
+</form>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('validateCtrl', function($scope) {
+        $scope.register=function () {
+            alert("hello");
+        }
+    });
+</script>
+</body>
+</html>
