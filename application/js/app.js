@@ -5,13 +5,13 @@ var app=angular.module('myapp',['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/',{
-            templateUrl: 'index.html'
+            templateUrl: 'application/html/index.html'
         })
         .when('/login',{
-            templateUrl: 'login.html'
+            templateUrl: 'application/html/login.html'
         })
         .when('/register',{
-            templateUrl: 'register.html'
+            templateUrl: 'application/html/register.html'
         })
         .when('/dashboard',{
             templateUrl: './dashboard.html'
