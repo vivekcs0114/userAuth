@@ -1,0 +1,24 @@
+{
+  "name": "user-auth",
+  "version": "1.0.0",
+  "description": "Sample Auth application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekcs0114/userAuth.git"
+  },
+  "author": "Vivek Tiwari <vivekcs0114@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivekcs0114/userAuth/issues"
+  },
+  "homepage": "https://github.com/vivekcs0114/userAuth#readme",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "jquery": "^3.2.0"
+  }
+}
