@@ -11,10 +11,10 @@ app.controller("LoginCtrl", function ($scope, $location,AuthService) {
     $scope.login = function () {
         var name = $scope.uname;
         var pass = $scope.upassword;
-        if ($scope.uname == 'admin' && $scope.upassword == 'admin') {
-            AuthService.setData(name);
+        if(AuthService.auth(name,pass)){
             $location.path('/dashboard');
-        } else {
+        }
+        else {
             alert('user not exist');
         }
     };

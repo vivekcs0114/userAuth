@@ -3,7 +3,7 @@
  */
 var app = angular.module('myapp');
 app.controller("HomeCtrl", function ($scope, AuthService, $location) {
-    $scope.username = AuthService.getData().data;
+    $scope.username = AuthService.getUser();
     $scope.signin = function () {
         $location.path('/login');
     }

@@ -3,11 +3,20 @@
  */
 var app=angular.module('myapp');
 app.service("AuthService",function () {
-    this.setData=function (value) {
-        this.data=value;
-        console.log("setting "+ this.data);
+    this.setUser=function (value) {
+        this.user=value;
+        console.log("setting "+ this.user);
     } ;
-    this.getData=function () {
-        return this;
+    this.getUser=function () {
+        return this.user;
     } ;
+    this.auth = function(uname,pass){
+
+        if (uname == 'admin' && pass == 'admin') {
+            this.setUser(uname);
+            return true;
+        } else {
+            return false;
+        }
+    };
 });
